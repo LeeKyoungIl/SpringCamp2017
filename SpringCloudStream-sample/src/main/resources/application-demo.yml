@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          autoCreateTopics: false
+          autoAddPartitions: false
+          zkNodes: zookeeper server address
+          brokers: kafka server address
+      bindings:
+        output:
+          destination: topic-name
+        input:
+          destination: topic-name
+          content-type: application/x-java-object;type=com.leekyoungil.channel.MessageInterface
+
+base:
+  filePath: c:\Temp
+  serverNo: 1
